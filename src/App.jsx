@@ -123,6 +123,16 @@ function App() {
           </span>
         </div>
       </section>
+
+      <section className="text-center pt-10">
+        <h1 className="text-7xl font-bold text-secondaryText pb-4">Projects</h1>
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-full flex justify-evenly items-center mb-4">
+            <span className="text-6xl font-bold text-secondaryText">01.</span>
+            <span className="text-accent text-4xl font-bold">BlazeGram</span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
