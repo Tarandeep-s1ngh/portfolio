@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import "./App.css";
 import {
   cssSvg,
@@ -13,14 +14,20 @@ import {
   tailwindcssSvg,
   typescriptSvg,
 } from "./assets";
-import { Navbar } from "./components/";
+import { Navbar, Project } from "./components/";
+import { projects } from "./db";
 
 function App() {
+
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
+
   return (
     <div className="App bg-bgmain text-mainText">
-      <Navbar />
+      <Navbar aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} />
 
-      <section className="text-center">
+      <section ref={aboutRef} className="text-center">
         <img src={dpBlob} alt="profile" className="w-[320px] m-auto" />
         <h1 className="text-5xl text-accent font-medium mb-3">
           Hi, I am <span className="text-7xl font-bold block">Taran</span>
@@ -36,14 +43,14 @@ function App() {
           alt="resume"
           target="_blank"
           rel="noreferrer"
-          className="text-accent underline font-semibold"
+          className="text-accent underline font-semibold hover:cursor-pointer"
         >
           Resume
         </a>
       </section>
 
       <section className="text-center pt-10">
-        <h1 className="text-7xl font-bold text-secondaryText pb-4">Skills</h1>
+        <h1 ref={skillsRef} className="text-7xl font-bold text-secondaryText pb-4">Skills</h1>
         <div className="flex flex-col items-center gap-4">
           <span className="flex items-center justify-center gap-4 relative max-w-[320px]">
             <img src={smallBlob} alt="small blob" className="w-[116px]" />
@@ -125,13 +132,10 @@ function App() {
       </section>
 
       <section className="text-center pt-10">
-        <h1 className="text-7xl font-bold text-secondaryText pb-4">Projects</h1>
-        <div className="flex flex-col items-center gap-4">
-          <div className="w-full flex justify-evenly items-center mb-4">
-            <span className="text-6xl font-bold text-secondaryText">01.</span>
-            <span className="text-accent text-4xl font-bold">BlazeGram</span>
-          </div>
-        </div>
+        <h1 ref={projectsRef} className="text-7xl font-bold text-secondaryText pb-4">Projects</h1>
+        {projects.map(project => {
+        return <Project key={project.id} projectData={project} />
+        })}
       </section>
     </div>
   );

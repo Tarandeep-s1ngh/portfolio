@@ -12,3 +12,8 @@ export { default as tailwindcssSvg } from "./tailwindcss.svg";
 export { default as gitSvg } from "./git.svg";
 export { default as githubSvg } from "./github.svg";
 export { default as firebaseSvg } from "./firebase.svg";
+export { default as blazeGram } from "./blazeGram.png";
+export { default as chessBlaze } from "./chessBlaze.png";
+export { default as sageMode } from "./sageMode.png";
+export { default as shehMart } from "./shehMart.png";
+export { default as blazeUi } from "./blazeUi.png";
