@@ -52,7 +52,7 @@ function App() {
       </section>
 
       <section className="text-center pt-10 xl:pt-20">
-        <h1 ref={skillsRef} className="text-7xl xl:text-[5rem] xl:text-[5rem] font-bold text-secondaryText pb-4">Skills</h1>
+        <h1 ref={skillsRef} className="text-7xl xl:text-[5rem] font-bold text-secondaryText pb-4">Skills</h1>
         <div className="flex flex-wrap justify-center items-center gap-4">
           <span className="flex items-center justify-center gap-4 relative max-w-[320px]">
             <img src={smallBlob} alt="small blob" className="w-[125px]" />
