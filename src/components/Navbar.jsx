@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 import { portfolioLogo } from "../assets";
 
-export const Navbar = ({aboutRef, skillsRef, projectsRef}) => {
+export const Navbar = ({ aboutRef, skillsRef, projectsRef }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const scrollToAbout = () => {
     setMenuOpen(false);
-    aboutRef.current?.scrollIntoView({behaviour: "smooth"})
-  }
+    aboutRef.current?.scrollIntoView({ behaviour: "smooth" });
+  };
 
   const scrollToSkills = () => {
     setMenuOpen(false);
-    skillsRef.current?.scrollIntoView({behaviour: "smooth"})
-  }
+    skillsRef.current?.scrollIntoView({ behaviour: "smooth" });
+  };
 
   const scrollToProjects = () => {
     setMenuOpen(false);
-    projectsRef.current?.scrollIntoView({behaviour: "smooth"})
-  }
+    projectsRef.current?.scrollIntoView({ behaviour: "smooth" });
+  };
 
   return (
     <nav
@@ -33,19 +33,28 @@ export const Navbar = ({aboutRef, skillsRef, projectsRef}) => {
         {/* Tab & Desktop Nav */}
 
         <div className="hidden md:flex gap-6 pt-1 pb-3 xl:text-xl">
-            <span onClick={()=>scrollToAbout()} className="flex items-center justify-center gap-3 pb-2 pt-1 hover:text-accent hover:cursor-pointer">
-              <i className="fa-regular fa-face-smile"></i>
-              About
-            </span>
-            <span onClick={()=>scrollToSkills()} className="flex items-center justify-center gap-3 py-2 hover:text-accent">
-              <i className="fa-brands fa-gripfire fa-lg"></i>
-              Skills
-            </span>
-            <span onClick={()=>scrollToProjects()} className="flex items-center justify-center gap-3 py-2 hover:text-accent">
-              <i className="fa-regular fa-folder-open"></i>
-              Projects
-            </span>
-            {/* <span className="flex items-center justify-center gap-3 py-2 hover:text-accent">
+          <span
+            onClick={() => scrollToAbout()}
+            className="flex items-center justify-center gap-3 pb-2 pt-1 hover:text-accent hover:cursor-pointer"
+          >
+            <i className="fa-regular fa-face-smile"></i>
+            About
+          </span>
+          <span
+            onClick={() => scrollToSkills()}
+            className="flex items-center justify-center gap-3 py-2 hover:text-accent hover:cursor-pointer"
+          >
+            <i className="fa-brands fa-gripfire fa-lg"></i>
+            Skills
+          </span>
+          <span
+            onClick={() => scrollToProjects()}
+            className="flex items-center justify-center gap-3 py-2 hover:text-accent hover:cursor-pointer"
+          >
+            <i className="fa-regular fa-folder-open"></i>
+            Projects
+          </span>
+          {/* <span className="flex items-center justify-center gap-3 py-2 hover:text-accent">
               <i className="fa-regular fa-pen-to-square"></i>
               Blogs
             </span>
@@ -53,7 +62,7 @@ export const Navbar = ({aboutRef, skillsRef, projectsRef}) => {
               <i className="fa-regular fa-comment"></i>
               Contact
             </span> */}
-          </div>
+        </div>
 
         {/* Tab & Desktop Nav */}
 
@@ -73,15 +82,24 @@ export const Navbar = ({aboutRef, skillsRef, projectsRef}) => {
       {menuOpen && (
         <div className="z-10 absolute w-full top-16 bg-bgSecondary pb-4 rounded-b-3xl">
           <div className="flex flex-col gap-2 w-full pb-3 md:hidden">
-            <span onClick={()=>scrollToAbout()} className="flex items-center justify-center gap-3 pb-2 hover:text-accent hover:cursor-pointer">
+            <span
+              onClick={() => scrollToAbout()}
+              className="flex items-center justify-center gap-3 pb-2 hover:text-accent hover:cursor-pointer"
+            >
               <i className="fa-regular fa-face-smile"></i>
               About
             </span>
-            <span onClick={()=>scrollToSkills()} className="flex items-center justify-center gap-3 py-2 hover:text-accent">
+            <span
+              onClick={() => scrollToSkills()}
+              className="flex items-center justify-center gap-3 py-2 hover:text-accent"
+            >
               <i className="fa-brands fa-gripfire fa-lg"></i>
               Skills
             </span>
-            <span onClick={()=>scrollToProjects()} className="flex items-center justify-center gap-3 py-2 hover:text-accent">
+            <span
+              onClick={() => scrollToProjects()}
+              className="flex items-center justify-center gap-3 py-2 hover:text-accent"
+            >
               <i className="fa-regular fa-folder-open"></i>
               Projects
             </span>
