@@ -4,7 +4,7 @@ export const Project = ({projectData}) => {
     const {id, name, coverImage, sourceCode, liveLink} = projectData;
   return (
     <div className="flex flex-col items-center gap-4 pb-4 xl:pb-12">
-          <div className="w-full flex justify-evenly items-center">
+          <div className="w-full flex justify-evenly xl:justify-between xl:px-44 items-center">
             <span className="text-6xl md:text-8xl font-bold text-secondaryText">{id}</span>
             <span className="text-accent text-4xl md:text-7xl font-bold">{name}</span>
           </div>

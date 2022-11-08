@@ -27,7 +27,7 @@ export const Navbar = ({aboutRef, skillsRef, projectsRef}) => {
           : "w-full flex flex-col justify-center items-center p-4 relative"
       }
     >
-      <div className="w-full flex justify-between items-center">
+      <div className="w-full flex justify-between items-center xl:px-12">
         <img src={portfolioLogo} alt="portfolio logo" width="50px" />
 
         {/* Tab & Desktop Nav */}
