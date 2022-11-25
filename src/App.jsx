@@ -18,20 +18,33 @@ import { Navbar, Project } from "./components/";
 import { projects } from "./db";
 
 function App() {
-
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
 
   return (
     <div className="App bg-bgmain text-mainText">
-      <Navbar aboutRef={aboutRef} skillsRef={skillsRef} projectsRef={projectsRef} />
+      <Navbar
+        aboutRef={aboutRef}
+        skillsRef={skillsRef}
+        projectsRef={projectsRef}
+      />
 
-      <section ref={aboutRef} className="text-center flex flex-wrap justify-center items-center gap-2 md:justify-evenly">
-        <img src={dpBlob} alt="profile" className="w-[320px] md:w-[380px] xl:w-[420px] m-auto md:m-0" />
+      <section
+        ref={aboutRef}
+        className="text-center flex flex-wrap justify-center items-center gap-2 md:justify-evenly"
+      >
+        <img
+          src={dpBlob}
+          alt="profile"
+          className="w-[320px] md:w-[380px] xl:w-[420px] m-auto md:m-0"
+        />
         <div>
           <h1 className="text-5xl md:text-6xl xl:text-8xl text-accent font-medium mb-3">
-            Hi, I am <span className="text-7xl md:text-8xl xl:text-10xl font-bold block">Taran</span>
+            Hi, I am{" "}
+            <span className="text-7xl md:text-8xl xl:text-10xl font-bold block">
+              Taran
+            </span>
           </h1>
           <h3 className="text-lg md:text-xl xl:text-2xl text-slate-400 font-semibold">
             Crafting The Web
@@ -52,7 +65,12 @@ function App() {
       </section>
 
       <section className="text-center pt-10 xl:pt-20">
-        <h1 ref={skillsRef} className="text-7xl xl:text-[5rem] font-bold text-secondaryText pb-4">Skills</h1>
+        <h1
+          ref={skillsRef}
+          className="text-7xl xl:text-[5rem] font-bold text-secondaryText pb-4"
+        >
+          Skills
+        </h1>
         <div className="flex flex-wrap justify-center items-center gap-4 xl:px-8">
           <span className="flex items-center justify-center gap-4 relative max-w-[320px]">
             <img src={smallBlob} alt="small blob" className="w-[125px]" />
@@ -134,42 +152,51 @@ function App() {
       </section>
 
       <section className="text-center pt-10 xl:pt-20">
-        <h1 ref={projectsRef} className="text-7xl xl:text-[5rem] font-bold text-secondaryText pb-4">Projects</h1>
-        {projects.map(project => {
-        return <Project key={project.id} projectData={project} />
+        <h1
+          ref={projectsRef}
+          className="text-7xl xl:text-[5rem] font-bold text-secondaryText pb-4"
+        >
+          Projects
+        </h1>
+        {projects.map((project) => {
+          return <Project key={project.id} projectData={project} />;
         })}
       </section>
 
       <footer className="hidden md:block pt-4 pb-8 max-w-4xl mx-auto">
-      <div className="flex justify-evenly items-center border-2 border-[#13131b] mx-6 rounded-3xl py-2 gap-6 xl:text-3xl">
-            <a
-              href="https://www.linkedin.com/in/tarandeep-s1ngh/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-linkedin-in text-accent"></i>
-            </a>{" "}
-            |
-            <a
-              href="https://twitter.com/Tarandeep_s1ngh"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-twitter text-accent"></i>
-            </a>{" "}
-            |
-            <a
-              href="https://github.com/Tarandeep-s1ngh"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <i className="fa-brands fa-github text-accent"></i>
-            </a>{" "}
-            |
-            <a href="taran.s1608@gmail.com" target="_blank" rel="noreferrer">
-              <i className="fa-solid fa-paper-plane text-accent"></i>
-            </a>
-          </div>
+        <div className="flex justify-evenly items-center border-2 border-[#13131b] mx-6 rounded-3xl py-2 gap-6 xl:text-3xl">
+          <a
+            href="https://www.linkedin.com/in/tarandeep-s1ngh/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-brands fa-linkedin-in text-accent"></i>
+          </a>{" "}
+          |
+          <a
+            href="https://twitter.com/Tarandeep_s1ngh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-brands fa-twitter text-accent"></i>
+          </a>{" "}
+          |
+          <a
+            href="https://github.com/Tarandeep-s1ngh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-brands fa-github text-accent"></i>
+          </a>{" "}
+          |
+          <a
+            href="mailto: taran.s1608@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-solid fa-paper-plane text-accent"></i>
+          </a>
+        </div>
       </footer>
     </div>
   );

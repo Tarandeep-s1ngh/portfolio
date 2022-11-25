@@ -138,7 +138,11 @@ export const Navbar = ({ aboutRef, skillsRef, projectsRef }) => {
               <i className="fa-brands fa-github text-accent"></i>
             </a>{" "}
             |
-            <a href="taran.s1608@gmail.com" target="_blank" rel="noreferrer">
+            <a
+              href="mailto: taran.s1608@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fa-solid fa-paper-plane text-accent"></i>
             </a>
           </div>
